@@ -405,3 +405,11 @@ The following prompt will be returned:
 - Change the ownership of the project directories: `sudo chown -R www-data:www-data catalog/`.
 - Restart Apache again: `sudo service apache2 restart`.
 - Open your browser to http://15.206.28.73.xip.io
+
+
+## Helpful Resources
+* https://github.com/boisalai/udacity-linux-server-configuration
+
+## Authors
+
+* **Saumyaraj Zala** - *Individual work* - [saumyaraj](https://github.com/saumyaraj)
