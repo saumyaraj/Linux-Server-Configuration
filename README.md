@@ -84,10 +84,8 @@ sudo apt-get upgrade
 
 - Click on the `Manage` option of the Amazon Lightsail Instance, 
 then the `Networking` tab, and then change the firewall configuration to match the internal firewall settings above.
-  <img src="images/screen4.png" width="600px">
 
 - Allow ports 80(TCP), 123(UDP), and 2200(TCP), and deny the default port 22.
-  <img src="images/screen5.png" width="600px">
 
 - From your local terminal, run: `ssh -i ~/.ssh/lightsail_key.rsa -p 2200 ubuntu@15.206.28.73`
 
