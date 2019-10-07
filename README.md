@@ -13,7 +13,7 @@ Password for grader is "udacitygrader"
 
 ### Update 2: 
 
-  ## Automatically install updates
+  #### Automatically install updates
   
   The `unattended-upgrades` package can be used to automatically install important system updates.
 - Enable automatic (security) updates: `sudo apt-get install unattended-upgrades`.
@@ -28,7 +28,7 @@ Password for grader is "udacitygrader"
 - Enable it: `sudo dpkg-reconfigure --priority=low unattended-upgrades`.
 - Restart Apache: `sudo service apache2 restart`.
 
-  ## Set ProhibitRootLogin to NO
+  #### Set ProhibitRootLogin to NO
   
 - sudo nano /etc/ssh/sshd_config
 - set ProhibitRootLogin to NO and save and exit file
