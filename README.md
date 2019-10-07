@@ -6,6 +6,10 @@ Amazon lighsail is used to create a Ubuntu VM
 Project can be found at http://15.206.28.73.xip.io
 
 
+### Update 1
+Grader can use the private key "grader" in the repository.
+Grader can login through - ssh -i ~/.ssh/grader_key -p 2200 grader@15.206.28.73
+Password for grader is "udacitygrader"
 
 ### Step 1: Start a new Ubuntu Linux server instance on Amazon Lightsail
 
