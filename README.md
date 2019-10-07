@@ -11,6 +11,28 @@ Grader can use the private key "grader" in the repository.
 Grader can login through - ssh -i ~/.ssh/grader_key -p 2200 grader@15.206.28.73
 Password for grader is "udacitygrader"
 
+### Update 2: 
+
+  ## Automatically install updates
+  
+  The `unattended-upgrades` package can be used to automatically install important system updates.
+- Enable automatic (security) updates: `sudo apt-get install unattended-upgrades`.
+- Edit `/etc/apt/apt.conf.d/50unattended-upgrades`, uncomment the line `${distro_id}:${distro_codename}-updates` and save it.
+- Modify `/etc/apt/apt.conf.d/20auto-upgrades` file so that the upgrades are downloaded and installed every day:
+  ```
+  APT::Periodic::Update-Package-Lists "1";
+  APT::Periodic::Download-Upgradeable-Packages "1";
+  APT::Periodic::AutocleanInterval "7";
+  APT::Periodic::Unattended-Upgrade "1";
+  ```
+- Enable it: `sudo dpkg-reconfigure --priority=low unattended-upgrades`.
+- Restart Apache: `sudo service apache2 restart`.
+
+  ## Set ProhibitRootLogin to NO
+  
+- sudo nano /etc/ssh/sshd_config
+- set ProhibitRootLogin to NO and save and exit file
+
 ### Step 1: Start a new Ubuntu Linux server instance on Amazon Lightsail
 
 - Login into [Amazon Lightsail](https://lightsail.aws.amazon.com/ls/webapp/home/resources) using an Amazon Web Services account.
